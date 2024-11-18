@@ -1,0 +1,15 @@
+--preview='head -$FZF_PREVIEW_LINES {}'
+--layout='reverse'
+--border='rounded'
+--height ~40%
+--prompt='> '
+--marker='>'
+--pointer='◆'
+--separator='─'
+--scrollbar='│'
+--layout='reverse'
+--info='right'
+--color=fg+:#c8c4ff,bg+:#1e1e1e,hl+:#6e63ff
+--color=hl:#c8c4ff,info:#c8c4ff,marker:#c8c4ff
+--color=prompt:#c8c4ff,spinner:#c8c4ff,pointer:#c8c4ff,header:#c8c4ff
+--color=border:-1,gutter:-1,fg:-1,bg:-1

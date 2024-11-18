@@ -1,0 +1,52 @@
+vim.g.mapleader = " "
+-- go to file explore
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- exit insert
+vim.keymap.set("i", "<C-c>", "<Esc>")
+-- run packer.lua
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/james/packer.lua<CR>");
+-- source the file
+vim.keymap.set("n", "<leader><leader>", function()
+    vim.cmd("so")
+end)
+-- close buffer
+vim.keymap.set("n", "<leader>q", "<C-w>q")
+-- buffer managment shortcut
+vim.keymap.set("n", "<leader>w", "<C-w>")
+-- nope
+vim.keymap.set("n", "Q", "<nop>")
+-- format
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- move highlighted text
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- half page jumping tweak
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+-- paste without changing clipboard
+vim.keymap.set("x", "<leader>p", [["_dP]])
+-- yank into the system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", ":'<,'>w !clip.exe<CR><CR>")
+-- deleting to void register
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+-- open navbuddy
+vim.keymap.set("n", "<leader>N", function()
+    vim.cmd("Navbuddy")
+end)
+-- exit terminal
+vim.api.nvim_set_keymap('t', '<ESC>', [[<C-\><C-n>]], { noremap = true })
+vim.api.nvim_set_keymap('t', '<C-d>', [[<C-\><C-d>]], { noremap = true })
+-- alias cmd's
+vim.cmd("command W w")
+vim.cmd("command Q q")
+vim.cmd("command Wq wq")
+vim.cmd("command WQ wq")
+vim.cmd("command Wa wa")
+vim.cmd("command WA wa")
+-- insert newline above and below while in N mode
+vim.keymap.set("n", "nl", "o<Esc>")
+vim.keymap.set("n", "Nl", "O<Esc>")
+vim.keymap.set("n", "NL", "O<Esc>")
+-- dont cancel visual mode when indenting blocks
+vim.keymap.set("v", ">", ">gv")
+vim.keymap.set("v", "<", "<gv")

@@ -39,6 +39,9 @@ zinit light zsh-users/zsh-syntax-highlighting
 # auto completions
 zinit light zsh-users/zsh-completions
 
+# auto suggestions
+zinit light zsh-users/zsh-autosuggestions
+
 # fzf-tab
 zinit light Aloxaf/fzf-tab
 

@@ -58,6 +58,8 @@ autoload -U compinit && compinit
 zinit cdreplay -q
 
 # keybindings
+bindkey -e
+bindkey '^f' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
@@ -82,7 +84,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # completion disable default menu
 zstyle ':completion:*' menu no
 # add fzf-tab completion menu
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'rg --hidden --files --follow -d 5'
 
 # aliases
 if [ -f ~/.zsh_aliases ]; then

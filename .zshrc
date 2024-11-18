@@ -13,8 +13,8 @@ fi
 if [ -f ~/.fzfrc ]; then
     export FZF_DEFAULT_OPTS_FILE=$HOME/.fzfrc
 fi
-# export FZF_DEFAULT_COMMAND='rg --hidden --files --follow -d 5'
-# export FZF_COMPLETION_TRIGGER=''
+export FZF_DEFAULT_COMMAND='rg --hidden --files --follow -d 5'
+export FZF_COMPLETION_TRIGGER='*'
 
 source <(fzf --zsh)
 
@@ -83,8 +83,10 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # completion disable default menu
 zstyle ':completion:*' menu no
-# add fzf-tab completion menu
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'rg --hidden --files --follow -d 5'
+# add preview window command to fzf-tab
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls $realpath'
+# fzf command for fzf-tab
+zstyle ':fzf-tab:cd:*' fzf-command 'rg --hidden --files --follow -d 5'
 
 # aliases
 if [ -f ~/.zsh_aliases ]; then
@@ -101,6 +103,3 @@ export _ZO_ECHO=0
 export _ZO_RESOLVE_SYMLINKS=1
 export _ZO_EXCLUDE_DIRS='$HOME/.cargo;$HOME/.vim'
 source <(zoxide init zsh --cmd cd --hook pwd)
-
-
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

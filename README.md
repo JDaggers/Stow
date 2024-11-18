@@ -13,15 +13,17 @@ Stow
 
 ## Installation
 
-First, check out the dotfiles repo in your $HOME directory using git
+First, check out the stow repo in your $HOME directory using git
 
 ```
 $ git clone https://github.com/JDaggers/Stow.git
 $ cd stow
 ```
 
-then use GNU stow to create symlinks
+then use stow to create symlinks
 
 ```
 $ stow .
 ```
+
+create branches for hardware or system configuration differences

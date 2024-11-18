@@ -16,7 +16,7 @@ Stow
 First, check out the dotfiles repo in your $HOME directory using git
 
 ```
-$ git clone git@github.com/dreamsofautonomy/stow.git
+$ git clone https://github.com/JDaggers/Stow.git
 $ cd stow
 ```
 

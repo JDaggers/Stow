@@ -47,7 +47,7 @@ zinit light Aloxaf/fzf-tab
 
 # zinit snippets
 zinit snippet OMZP::git
-zinit snippet OMZP::tmux
+# zinit snippet OMZP::tmux
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
 
@@ -76,6 +76,11 @@ setopt hist_save_no_dups
 setopt hist_ignore_space
 # setopt hist_verify # load selected history into buffer first
 setopt hist_find_no_dups
+
+# other zsh options
+setopt autocd
+setopt auto_pushd
+
 
 # completion remove case-sensitivity
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'

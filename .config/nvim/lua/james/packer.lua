@@ -3,14 +3,14 @@
 
 -- ensuring packer is installed properly
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+    local fn = vim.fn
+    local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+        vim.cmd [[packadd packer.nvim]]
+        return true
+    end
+    return false
 end
 
 local packer_bootstrap = ensure_packer()
@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
         }
     }
     -- Game
-    use('ThePrimeagen/vim-be-good')
+    -- use('ThePrimeagen/vim-be-good')
     -- Makes transparent
     use('xiyaowong/transparent.nvim')
     -- Comments blocks: gbc, lines: gcc
@@ -67,7 +67,6 @@ return require('packer').startup(function(use)
     }
     -- Status Line
     use('feline-nvim/feline.nvim')
-    use('Hitesh-Aggarwal/feline_one_monokai.nvim')
     use('nvim-tree/nvim-web-devicons')
     -- In File Navigator <leader>N
     use {
@@ -88,6 +87,8 @@ return require('packer').startup(function(use)
     --     end
     -- }
     use('windwp/nvim-ts-autotag')
+    -- tmux pane navigation integration (ctrl-[hjkl])
+    use('christoomey/vim-tmux-navigator')
 
     if packer_bootstrap then
         require('packer').sync()

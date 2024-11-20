@@ -1,4 +1,4 @@
-alias ls='ls -lah --color=auto'
+alias ls='ls -lahH --color=auto'
 alias vim='nvim'
 NVIM=/home/james/.config/nvim
 alias py='python3'

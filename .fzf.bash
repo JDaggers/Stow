@@ -12,7 +12,7 @@ export FZF_COMPLETION_TRIGGER=''
 
 eval "$(fzf --bash)"
 
-if [ -f ~/.fzf/shell/completion.bash && -f ~/.fzf/shell/key-bindings.bash ]; then
-    source ~/.fzf/shell/completion.bash
-    source ~/.fzf/shell/key-bindings.bash
-fi
+# if [ -f ~/.fzf/shell/completion.bash && -f ~/.fzf/shell/key-bindings.bash ]; then
+#     source ~/.fzf/shell/completion.bash
+#     source ~/.fzf/shell/key-bindings.bash
+# fi

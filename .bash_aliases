@@ -1,4 +1,5 @@
-alias ls='ls -lah --color=auto'
+#!/bin/bash
+alias ls='ls -lahH --color=auto'
 alias vim='nvim'
 NVIM=/home/james/.config/nvim
 alias py='python3'
@@ -16,3 +17,8 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+
+# keepassxc-cli
+if [ -f ~/.keepassxc_aliases ]; then
+    source ~/.keepassxc_aliases
+fi

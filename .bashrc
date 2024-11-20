@@ -141,9 +141,9 @@ fi
 # setup fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
-neofetch
+# neofetch
 
 export _ZO_DATA_DIR=$HOME/.local/share/zoxide
 export _ZO_FZF_OPTS='--preview=""'

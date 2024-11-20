@@ -98,7 +98,7 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # setup zoxide
 export _ZO_DATA_DIR=$HOME/.local/share/zoxide

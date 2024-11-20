@@ -1,7 +1,5 @@
-[credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe
 [core]
-	editor = nvim
+	editor="nvim"
 [user]
 	email = james.t.dagnall@gmail.com
 	name = James Dagnall

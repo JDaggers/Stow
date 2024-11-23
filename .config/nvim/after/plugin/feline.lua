@@ -5,20 +5,51 @@ end
 
 -- taken from catpuccin.com/palette
 local catpuccin_mocha = {
-    fg = "#cdd6f4",    -- text
-    bg = "#1e1e2e",    -- base
-    green = "#a6e3a1", -- green
-    yellow = "#f9e2af", -- yellow
-    mauve = "#cba6f7", -- mauve
-    peach = "#fab387", -- peach
-    flamingo = "#f2cdcd", -- flamingo
-    maroon = "#eba0ac", -- maroon
-    sapphire = "#74c7ec", -- sapphire
-    blue = "#89b4fa",  -- blue
-    crust = "#11111b", -- crust
-    red = "#f38ba8",   -- red
-    overlay0 = "#6c7086", -- overlay 0
-    surface0 = "#313244", -- surface 0
+    flamingo = "#f2cdcd",
+    pink = "#f5c2e7",
+    mauve = "#cba6f7",
+    red = "#f38ba8",
+    maroon = "#eba0ac",
+    peach = "#fab387",
+    yellow = "#f9e2af",
+    green = "#a6e3a1",
+    teal = "#94e2d5",
+    sky = "#89dceb",
+    sapphire = "#74c7ec",
+    blue = "#89b4fa",
+    lavender = "#b4befe",
+    text = "#cdd6f4",
+    subtext1 = "#bac2de",
+    subtext0 = "#a6adc8",
+    overlay2 = "#9399b2",
+    overlay1 = "#7f849c",
+    overlay0 = "#6c7086",
+    surface2 = "#585b70",
+    surface1 = "#45475a",
+    surface0 = "#313244",
+    base = "#1e1e2e",
+    mantle = "#181825",
+    crust = "#11111b",
+    bg = "#181825",
+    fg =  "#cdd6f4",
+}
+
+local colors = {
+    fg = "text",
+    bg = "mantle",
+    bg_lighter = "surface0",
+    git_branch = "flamingo",
+    git_added = "green",
+    git_removed = "maroon",
+    error = "maroon",
+    warning = "yellow",
+    hint = "sapphire",
+    lsp = "mauve",
+    file_type = "maroon",
+    encoding = "peach",
+    position = "green",
+    scroll_percentage = "sapphire",
+    scroll_bar = "yellow",
 }
 
 local vi_mode_colors = {
@@ -44,7 +75,7 @@ local c = {
         hl = function()
             return {
                 fg = require("feline.providers.vi_mode").get_mode_color(),
-                bg = "surface0",
+                bg = colors.bg_lighter,
                 style = "bold",
                 name = "NeovimModeHLColor",
             }
@@ -55,8 +86,8 @@ local c = {
     gitBranch = {
         provider = "git_branch",
         hl = {
-            fg = "flamingo",
-            bg = "surface0",
+            fg = colors.git_branch,
+            bg = colors.bg_lighter,
             style = "bold",
         },
         left_sep = "left_rounded",
@@ -65,8 +96,8 @@ local c = {
     gitDiffAdded = {
         provider = "git_diff_added",
         hl = {
-            fg = "green",
-            bg = "surface0",
+            fg = colors.git,
+            bg = colors.bg_lighter,
         },
         left_sep = "block",
         right_sep = "block",
@@ -75,7 +106,7 @@ local c = {
         provider = "git_diff_removed",
         hl = {
             fg = "maroon",
-            bg = "surface0",
+            bg = colors.bg_lighter,
         },
         left_sep = "block",
         right_sep = "block",
@@ -83,8 +114,8 @@ local c = {
     gitDiffChanged = {
         provider = "git_diff_changed",
         hl = {
-            fg = "fg",
-            bg = "surface0",
+            fg = colors.fg,
+            bg = colors.bg_lighter,
         },
         left_sep = "block",
         right_sep = "right_rounded",
@@ -95,8 +126,9 @@ local c = {
     spacer_left = {
         provider = " ",
         hl = {
-            fg = "fg",
-            bg = "surface0"
+            fg = colors.fg,
+
+            bg = colors.bg_lighter,
         },
         left_sep = "left_rounded",
         right_sep = "block",
@@ -104,8 +136,9 @@ local c = {
     spacer_right = {
         provider = " ",
         hl = {
-            fg = "fg",
-            bg = "surface0"
+            fg = colors.fg,
+
+            bg = colors.bg_lighter,
         },
         left_sep = "block",
         right_sep = "right_rounded",
@@ -126,19 +159,19 @@ local c = {
     diagnostic_errors = {
         provider = "diagnostic_errors",
         hl = {
-            fg = "maroon",
+            fg = colors.error,
         },
     },
     diagnostic_warnings = {
         provider = "diagnostic_warnings",
         hl = {
-            fg = "yellow",
+            fg = colors.warning,
         },
     },
     diagnostic_hints = {
         provider = "diagnostic_hints",
         hl = {
-            fg = "sapphire",
+            fg = colors.hint,
         },
     },
     diagnostic_info = {
@@ -147,11 +180,11 @@ local c = {
     lsp_client_names = {
         provider = "lsp_client_names",
         hl = {
-            fg = "mauve",
-            bg = "surface0",
+            fg = colors.lsp,
+            bg = colors.bg_lighter,
             style = "bold",
         },
-        left_sep = "left_rounded",
+        left_sep = "block",
         right_sep = "block",
     },
     file_type = {
@@ -163,8 +196,8 @@ local c = {
             },
         },
         hl = {
-            fg = "maroon",
-            bg = "surface0",
+            fg = colors.file,
+            bg = colors.bg_lighter,
             style = "bold",
         },
         left_sep = "block",
@@ -173,8 +206,8 @@ local c = {
     file_encoding = {
         provider = "file_encoding",
         hl = {
-            fg = "peach",
-            bg = "surface0",
+            fg = colors.encoding,
+            bg = colors.bg_lighter,
             style = "bold",
         },
         left_sep = "block",
@@ -183,8 +216,8 @@ local c = {
     position = {
         provider = "position",
         hl = {
-            fg = "green",
-            bg = "surface0",
+            fg = colors.position,
+            bg = colors.bg_lighter,
             style = "bold",
         },
         left_sep = "block",
@@ -193,8 +226,8 @@ local c = {
     line_percentage = {
         provider = "line_percentage",
         hl = {
-            fg = "sapphire",
-            bg = "surface0",
+            fg = colors.scroll_percentage,
+            bg = colors.bg_lighter,
             style = "bold",
         },
         left_sep = "block",
@@ -203,7 +236,7 @@ local c = {
     scroll_bar = {
         provider = "scroll_bar",
         hl = {
-            fg = "yellow",
+            fg = colors.scroll_bar,
             style = "bold",
         },
     },
@@ -258,5 +291,9 @@ feline.setup({
 })
 
 -- style command line to be of uniform colorscheme
-local gui_command = "highlight MsgArea guibg=" .. catpuccin_mocha.bg .. " guifg=" .. catpuccin_mocha.fg
+local gui_command = "highlight MsgArea guibg=" .. catpuccin_mocha.mantle .. " guifg=" .. catpuccin_mocha.text
 vim.cmd(gui_command)
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*",
+    command = gui_command
+})

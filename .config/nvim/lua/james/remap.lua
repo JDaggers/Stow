@@ -26,7 +26,15 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- paste without changing clipboard
 vim.keymap.set("x", "<leader>p", [["_dP]])
 -- yank into the system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", ":'<,'>w !clip.exe<CR><CR>")
+vim.keymap.set("v", "<leader>y", "\"+y")
+-- yank whole line into the system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>Y", "\"+Y")
+-- paste from the system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>p", "\"+p")
+-- yank into ~/.local/share/nvim/.vimbuffer
+vim.keymap.set("v", "ty", ":w! ~/.local/share/nvim/.vimbuffer<CR>")
+-- paste from ~/.local/share/nvim/.vimbuffer
+vim.keymap.set("n", "tp", ":r ~/.local/share/nvim/.vimbuffer<CR>")
 -- deleting to void register
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- open navbuddy

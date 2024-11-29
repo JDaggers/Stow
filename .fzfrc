@@ -1,7 +1,7 @@
---preview='head -$FZF_PREVIEW_LINES {}'
+--preview='if [ -d {} ];then tree -C {}; else batcat --color always --line-range :$FZF_PREVIEW_LINES {}; fi'
 --layout='reverse'
 --border='rounded'
---height ~40%
+--height 40%
 --prompt='> '
 --marker='>'
 --pointer='◆'

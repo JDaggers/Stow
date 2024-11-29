@@ -80,6 +80,11 @@ setopt hist_find_no_dups
 # other zsh options
 setopt autocd
 setopt auto_pushd
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' special-dirs true
+# hidden files in zsh completion
+setopt GLOB_DOTS
 
 
 # completion remove case-sensitivity
@@ -88,10 +93,9 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # completion disable default menu
 zstyle ':completion:*' menu no
-# add preview window command to fzf-tab
-# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls $realpath'
-# fzf command for fzf-tab
-zstyle ':fzf-tab:cd:*' fzf-command 'rg --hidden --files --follow -d 5'
+zstyle ':fzf-tab:complete:cd:*' fzf-flags --height=40% --no-preview 
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview "tree -C $realpath"
+# zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 # aliases
 if [ -f ~/.zsh_aliases ]; then
@@ -102,7 +106,7 @@ fi
 
 # setup zoxide
 export _ZO_DATA_DIR=$HOME/.local/share/zoxide
-export _ZO_FZF_OPTS='--preview=""'
+export _ZO_FZF_OPTS='--no-preview'
 export _ZO_MAXAGE=10000
 export _ZO_ECHO=0
 export _ZO_RESOLVE_SYMLINKS=1

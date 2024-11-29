@@ -1,3 +1,4 @@
+#!/bin/bash
 alias ls='ls -lahH --color=auto'
 alias vim='nvim'
 NVIM=/home/james/.config/nvim
@@ -16,6 +17,9 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+
+alias bat="batcat"
+alias man="batman --paging=always"
 
 show_colors() {
     for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done

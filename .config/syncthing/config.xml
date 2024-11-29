@@ -1,6 +1,9 @@
 <configuration version="37">
     <folder id="26bfd-pbgoj" label="secure" path="~/secure" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="true" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="NYORDT7-6IUBNB6-7DGXYQA-TK2TZLW-YJYDBOK-E3PISCB-PIHPSAA-EQI7VQI" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="ZKJOMTR-VVEEBOO-LBD2XU4-BHLSIZF-ZSJ23PX-ZM2J4A6-DQP73BW-EZTPGQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -91,6 +94,17 @@
             <maxTotalSize>4096</maxTotalSize>
         </xattrFilter>
     </folder>
+    <device id="NYORDT7-6IUBNB6-7DGXYQA-TK2TZLW-YJYDBOK-E3PISCB-PIHPSAA-EQI7VQI" name="Galaxy-s10e" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+        <autoAcceptFolders>false</autoAcceptFolders>
+        <maxSendKbps>0</maxSendKbps>
+        <maxRecvKbps>0</maxRecvKbps>
+        <maxRequestKiB>0</maxRequestKiB>
+        <untrusted>false</untrusted>
+        <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
+    </device>
     <device id="ZKJOMTR-VVEEBOO-LBD2XU4-BHLSIZF-ZSJ23PX-ZM2J4A6-DQP73BW-EZTPGQI" name="jamesubuntu" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
@@ -152,7 +166,6 @@
         <releasesURL>https://upgrades.syncthing.net/meta.json</releasesURL>
         <overwriteRemoteDeviceNamesOnConnect>false</overwriteRemoteDeviceNamesOnConnect>
         <tempIndexMinBlocks>10</tempIndexMinBlocks>
-        <unackedNotificationID>authenticationUserAndPassword</unackedNotificationID>
         <trafficClass>0</trafficClass>
         <setLowPriority>true</setLowPriority>
         <maxFolderConcurrency>0</maxFolderConcurrency>

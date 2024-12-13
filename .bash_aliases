@@ -18,11 +18,13 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
-# keepassxc-cli
 
 if [ -f ~/.keepassxc_aliases ]; then
     source ~/.keepassxc_aliases
 fi
+
+alias bat="batcat"
+alias man="batman --paging=always"
 
 show_colors() {
     for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done

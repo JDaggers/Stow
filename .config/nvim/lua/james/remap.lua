@@ -37,10 +37,6 @@ vim.keymap.set("v", "ty", ":w! ~/.local/share/nvim/.vimbuffer<CR>")
 vim.keymap.set("n", "tp", ":r ~/.local/share/nvim/.vimbuffer<CR>")
 -- deleting to void register
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
--- open navbuddy
-vim.keymap.set("n", "<leader>N", function()
-    vim.cmd("Navbuddy")
-end)
 -- exit terminal
 vim.api.nvim_set_keymap('t', '<ESC>', [[<C-\><C-n>]], { noremap = true })
 vim.api.nvim_set_keymap('t', '<C-d>', [[<C-\><C-d>]], { noremap = true })

@@ -68,17 +68,6 @@ return require('packer').startup(function(use)
     -- Status Line
     use('feline-nvim/feline.nvim')
     use('nvim-tree/nvim-web-devicons')
-    -- In File Navigator <leader>N
-    use {
-        "SmiteshP/nvim-navbuddy",
-        requires = {
-            "neovim/nvim-lspconfig",
-            "SmiteshP/nvim-navic",
-            "MunifTanjim/nui.nvim",
-            "numToStr/Comment.nvim",        -- Optional
-            "nvim-telescope/telescope.nvim" -- Optional
-        }
-    }
     -- HTML tag auto closing
     -- use{
     --     'windwp/nvim-ts-autotag',

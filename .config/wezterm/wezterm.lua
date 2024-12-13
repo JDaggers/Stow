@@ -81,7 +81,7 @@ config.colors = {
         },
     }
 }
-print(colors)
+-- print(colors)
 -- colors.background = "#000000" -- for example
 -- color_schemes = ["new altered colorscheme"] = colors
 -- color_scheme = "new altered colorscheme"
@@ -167,8 +167,10 @@ config.keys = {
     -- activate search mode
     { key = '/',          mods = "LEADER", action = act.Search { Regex = "" } },
     -- copy paste
-    { key = 'c',          mods = "SUPER",  action = act.CopyTo "Clipboard" },
-    { key = 'v',          mods = "SUPER",  action = act.PasteFrom "Clipboard" },
+    -- dont work with i3
+    -- { key = 'c',          mods = "SUPER",  action = act.CopyTo "Clipboard" },
+    -- { key = 'v',          mods = "SUPER",  action = act.PasteFrom "Clipboard" },
+    { key = 'v',          mods = "CTRL",  action = act.PasteFrom "Clipboard" },
     -- command palette
     { key = 'p',          mods = "LEADER", action = act.ActivateCommandPalette },
     -- apparently I need this
@@ -195,7 +197,7 @@ config.keys = {
     { key = "RightArrow", mods = "SHIFT",  action = act.ActivateTabRelative(1) },
     { key = "LeftArrow",  mods = "SHIFT",  action = act.ActivateTabRelative(-1) },
     -- close window
-    { key = 'd',          mods = "LEADER", action = act.CloseCurrentTab { confirm = true } },
+    { key = 'd',          mods = "LEADER", action = act.CloseCurrentTab { confirm = false } },
     -- Sessions -- "workspaces" in wezterm
     { key = 'w',          mods = "LEADER", action = act.ShowLauncherArgs { flags = "FUZZY|TABS|WORKSPACES|DOMAINS|LAUNCH_MENU_ITEMS" } },
 }

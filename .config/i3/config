@@ -56,6 +56,10 @@ exec --no-startup-id nm-applet
 # borders (man picom)
 exec --no-startup-id picom
 
+# nitrogen sets the wallpaper. 
+# --restore sets the previously configured wallpaper then exits
+exec --no-startup-id nitrogen --restore
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3
@@ -267,6 +271,6 @@ default_floating_border pixel 2
 # outer gaps has to be negative inner gaps in order to have no gaps along
 # screen edges. outer only applies to the screen edges, inner applies to all 
 # sides of a window
-gaps inner 10px
-gaps outer -10px
+gaps inner 0px
+gaps outer 0px
 smart_gaps on

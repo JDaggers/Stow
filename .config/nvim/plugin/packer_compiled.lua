@@ -106,11 +106,6 @@ _G.packer_plugins = {
     path = "/home/james/.local/share/nvim/site/pack/packer/start/feline.nvim",
     url = "https://github.com/feline-nvim/feline.nvim"
   },
-  ["feline_one_monokai.nvim"] = {
-    loaded = true,
-    path = "/home/james/.local/share/nvim/site/pack/packer/start/feline_one_monokai.nvim",
-    url = "https://github.com/Hitesh-Aggarwal/feline_one_monokai.nvim"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/james/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",

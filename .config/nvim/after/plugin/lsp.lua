@@ -11,6 +11,7 @@ lsp.ensure_installed({
     'clangd',
     'pylsp',
     'lua_ls',
+    'gopls',
 })
 
 local cmp = require('cmp')
@@ -18,8 +19,8 @@ local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-    ["<C-f>"] = cmp.mapping.complete(),
+    ['<C-f>'] = cmp.mapping.confirm({ select = true }),
+    ["<C-y>"] = cmp.mapping.complete(),
 })
 
 cmp_mappings['<Tab>'] = nil
@@ -29,15 +30,12 @@ lsp.setup_nvim_cmp({
     mapping = cmp_mappings
 })
 
--- Configure navbuddy for specific lsp's
-local navbuddy = require("nvim-navbuddy")
 local lspconfig = require("lspconfig")
 
 -- Configure lsp for lua
 lspconfig.lua_ls.setup {
     lsp.nvim_lua_ls(),
     on_attach = function(client, bufnr)
-        navbuddy.attach(client, bufnr)
     end,
     settings = {
         Lua = {
@@ -51,7 +49,6 @@ lspconfig.lua_ls.setup {
 -- configure lsp for clangd
 lspconfig.clangd.setup {
     on_attach = function(client, bufnr)
-        navbuddy.attach(client, bufnr)
     end,
     filetypes = { "c", "cpp", "objc", "objcpp" }
 }
@@ -59,7 +56,6 @@ lspconfig.clangd.setup {
 -- configure lsp for pylsp
 lspconfig.pylsp.setup {
     on_attach = function(client, bufnr)
-        navbuddy.attach(client, bufnr)
     end
 }
 

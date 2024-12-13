@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# remove god awful ls colros for other wirtable files
+# LS_COLORS+=':ow=01;31'
+
 # setup fzf
 if [[ ! "$PATH" == *${HOME}/.fzf/bin* ]]; then
   PATH="${PATH:+${PATH}:}${HOME}/.fzf/bin"
@@ -84,6 +87,8 @@ setopt auto_pushd
 
 # completion remove case-sensitivity
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+# remove god awful ls colors for other writable dirs, change to bold yellow
+LS_COLORS+='ow=01;33'; export LS_COLORS
 # completion add colors
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # completion disable default menu

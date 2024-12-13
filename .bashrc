@@ -138,6 +138,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# remove god awful ls colors for other writable dirs, change to bold yellow
+LS_COLORS+='ow=01;33'; export LS_COLORS
+
 # setup fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 

@@ -1,6 +1,6 @@
 # My configs
 
-This directory contains the configs for my system
+This directory contains the configs for my Mac Mini Server
 
 ## Requirements
 
@@ -10,6 +10,8 @@ Ensure you have the following installed on your system
 Git
 Stow
 ```
+
+Further dependencies are listed in ./dependencies
 
 ## Installation
 

@@ -8,10 +8,10 @@ end)
 
 -- hard installed
 lsp.ensure_installed({
-    'clangd',
-    'pylsp',
+    -- 'clangd',
+    -- 'pylsp',
     'lua_ls',
-    'gopls',
+    -- 'gopls',
 })
 
 local cmp = require('cmp')
@@ -46,18 +46,18 @@ lspconfig.lua_ls.setup {
     }
 }
 
--- configure lsp for clangd
-lspconfig.clangd.setup {
-    on_attach = function(client, bufnr)
-    end,
-    filetypes = { "c", "cpp", "objc", "objcpp" }
-}
-
--- configure lsp for pylsp
-lspconfig.pylsp.setup {
-    on_attach = function(client, bufnr)
-    end
-}
+-- -- configure lsp for clangd
+-- lspconfig.clangd.setup {
+--     on_attach = function(client, bufnr)
+--     end,
+--     filetypes = { "c", "cpp", "objc", "objcpp" }
+-- }
+--
+-- -- configure lsp for pylsp
+-- lspconfig.pylsp.setup {
+--     on_attach = function(client, bufnr)
+--     end
+-- }
 
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }

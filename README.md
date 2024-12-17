@@ -70,6 +70,10 @@ First, check out the stow repo in your $HOME directory using git.
 ```
 $ cd ~
 $ git clone https://github.com/JDaggers/Stow.git
+$ mv Stow stow
+$ cd stow
+$ git switch macbook-ubuntu
+$ cd ~
 ```
 
 Make directories that shouldn`t be symlinked.

@@ -1,10 +1,15 @@
-Git
-Stow
-Zsh
-BatCat
-Syncthing
-FZF
+git
+stow
+# zsh cmd line dependencies
+zsh
+batcat 
+bat-extras from git@github.com:eth-p/bat-extras.git
+fzf from git@github.com:junegunn/fzf.git. run install script
+tpm from git@github.com:tmux-plugins/tpm.git
+ripgrep
 neofetch
-nvim
 tmux
 zoxide
+# other
+syncthing
+nvim

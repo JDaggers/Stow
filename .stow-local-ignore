@@ -21,3 +21,7 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
+
+dependencies
+install-script.sh
+.config/syncthing/config.xml

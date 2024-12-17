@@ -121,11 +121,6 @@ _G.packer_plugins = {
     path = "/home/james/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/home/james/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/james/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -135,16 +130,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/james/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-navbuddy"] = {
-    loaded = true,
-    path = "/home/james/.local/share/nvim/site/pack/packer/start/nvim-navbuddy",
-    url = "https://github.com/SmiteshP/nvim-navbuddy"
-  },
-  ["nvim-navic"] = {
-    loaded = true,
-    path = "/home/james/.local/share/nvim/site/pack/packer/start/nvim-navic",
-    url = "https://github.com/SmiteshP/nvim-navic"
   },
   ["nvim-treesitter"] = {
     loaded = true,

@@ -42,7 +42,7 @@ nvim
 ```
 
 #### Optional: 
-Programs which there are no configuration for but which are used in this installation.
+Programs which there is no configuration for but which are used in this installation.
 
 Nitrogen is a basic wallpaper application
 ```

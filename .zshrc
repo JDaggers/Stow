@@ -93,7 +93,8 @@ setopt GLOB_DOTS
 # completion remove case-sensitivity
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # remove god awful ls colors for other writable dirs, change to bold yellow
-LS_COLORS+='ow=01;33'; export LS_COLORS
+# evaluating the rules in the ~/.dircolors file
+eval "$(dircolors ~/.dircolors)"
 # completion add colors
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # completion disable default menu
